@@ -1,0 +1,10 @@
+kind: Pod              // object name
+apiVersion: v1
+metadata:             // to define pod name (or) object
+  name: jspiders      // pod name
+spec:                 //specification(what we need containers)
+  containers:
+    - name: sample1
+      image: ubuntu
+      command: ["/bin/bash", "-c", "while true; do echo Hi everyone; sleep 5; done"]
+  restartPolicy: Never         # Defaults to Always
