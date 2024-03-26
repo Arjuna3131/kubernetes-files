@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: flipkart
+spec:
+  containers:
+    - name: signup
+      image: amazonlinux
+      command: ["/bin/bash", "-c", "while true; do echo Hi everyone; sleep 5; done"]
+    - name: login
+      image: nginx
+      ports:
+       - containerPort: 80
